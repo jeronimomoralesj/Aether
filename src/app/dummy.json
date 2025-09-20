@@ -1,0 +1,379 @@
+{
+  "clients": [
+    {
+      "id": "mekmdede",
+      "name": "AT&T",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/AT%26T_logo_2016.svg/330px-AT%26T_logo_2016.svg.png",
+      "cost": 1000,
+      "revenue": 3000,
+      "preferences": {
+        "periodicity": "every mission",
+        "users": [1]
+      },
+      "contacts": [
+        {
+          "id": 1,
+          "name": "John",
+          "email": "john@att.com",
+          "phone": "+1 7949872345"
+        },
+        {
+          "id": 2,
+          "name": "Erica",
+          "email": "erica@att.com",
+          "phone": "+1 7239452345"
+        }
+      ],
+      "missions": [
+        {
+          "id": "ngo34iren203",
+          "name": "Mission Alpha"
+        },
+        {
+          "id": "nkc092323ed",
+          "name": "Mission Beta"
+        },
+        {
+          "id": "23093jiekndw0w",
+          "name": "Mission Gamma"
+        }
+      ]
+    },
+    {
+      "id": "fwee32r",
+      "name": "T-Mobile",
+      "logo": "https://play-lh.googleusercontent.com/m6f9VrBZNDS1iRsbghoI7dbwcMksR1f8FUJrhji3U2GPDVCko50d_fJ8uismG8xa0B8",
+      "cost": 1000,
+      "revenue": 3000,
+      "preferences": {
+        "periodicity": "every mission",
+        "users": [1]
+      },
+      "contacts": [
+        {
+          "id": 1,
+          "name": "Chris",
+          "email": "chris@tmobile.com",
+          "phone": "+1 7949872345"
+        },
+        {
+          "id": 2,
+          "name": "Manu",
+          "email": "manu@tmobile.com",
+          "phone": "+1 7239452345"
+        }
+      ],
+      "missions": [
+        {
+          "id": "ngo34iren203",
+          "name": "Mission Alpha"
+        },
+        {
+          "id": "nkc092323ed",
+          "name": "Mission Beta"
+        },
+        {
+          "id": "23093jiekndw0w",
+          "name": "Mission Gamma"
+        }
+      ]
+    },
+    {
+      "id": "hgew",
+      "name": "Verizon",
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUBYrMz5cJ5bD8bzoZBpF9_qIpFNvNqdZsXQ&s",
+      "cost": 1000,
+      "revenue": 3000,
+      "preferences": {
+        "periodicity": "every mission",
+        "users": [1]
+      },
+      "contacts": [
+        {
+          "id": 1,
+          "name": "Lisa",
+          "email": "lisa@verizon.com",
+          "phone": "+1 7949872345"
+        },
+        {
+          "id": 2,
+          "name": "Camille",
+          "email": "camille@verizon.com",
+          "phone": "+1 7239452345"
+        }
+      ],
+      "missions": [
+        {
+          "id": "ngo34iren203",
+          "name": "Mission Alpha"
+        },
+        {
+          "id": "nkc092323ed",
+          "name": "Mission Beta"
+        },
+        {
+          "id": "23093jiekndw0w",
+          "name": "Mission Gamma"
+        }
+      ]
+    }
+  ],
+  "missions": [
+    {
+      "id": "898dew",
+      "name": "Alpha",
+      "destination": "ISS",
+      "startDate": "2025-10-15T09:00:00Z",
+      "durationDays": 30,
+      "shipId": "VRryrfed",
+      "passengerCount": 4,
+      "launchLocation": "Kennedy Space Center",
+      "coverImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Artemis_program_%28solid_contrast_with_wordmark%29.svg/1200px-Artemis_program_%28solid_contrast_with_wordmark%29.svg.png",
+      "cargo": ["3edw8ouh", "edwñl789"],
+      "createdAt": "2025-09-01T12:00:00Z",
+      "updatedAt": "2025-09-08T10:30:00Z"
+    },
+    {
+      "id": "ut6898e",
+      "name": "Beta",
+      "destination": "ISS",
+      "startDate": "2025-10-15T09:00:00Z",
+      "durationDays": 30,
+      "shipId": "VRryrfed",
+      "passengerCount": 4,
+      "launchLocation": "Kennedy Space Center",
+      "coverImage": "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2010/06/iss2/18901111-1-eng-GB/ISS.jpg",
+      "cargo": ["efy87dy7ui"],
+      "createdAt": "2025-09-01T12:00:00Z",
+      "updatedAt": "2025-09-08T10:30:00Z"
+    }
+  ],
+  "ships": [
+    {
+      "id": "VRryrfed",
+      "name": "Starship",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/4/4a/SpaceX_Starship_ignition_during_IFT-5.jpg",
+      "cargoCapacity": 150000,
+      "volumeCapacity": 1500,
+      "createdAt": "2025-08-01T10:00:00Z",
+      "updatedAt": "2025-09-01T10:00:00Z"
+    }
+  ],
+  "inventory": [
+    {
+      "id": "uyg798dews",
+      "missionId": "898dew",
+      "name": "Maister Satellite",
+      "mass": 312323,
+      "volume": 231,
+      "criticality": 5,
+      "placeId": [
+        {
+          "value": "fwedwf1223",
+          "date": "2025-04-04T10:30:00Z",
+          "responsible": "John"
+        }
+      ],
+      "subLocation": "Bin2",
+      "case": "few",
+      "status": "Delivered",
+      "clientId": "fwee32r",
+      "createdAt": "2025-04-04T10:30:00Z",
+      "updatedAt": "2025-04-04T10:30:00Z"
+    },
+    {
+      "id": "fre08unoje",
+      "missionId": null,
+      "name": "Maister Satellite",
+      "mass": 100,
+      "volume": 231,
+      "criticality": null,
+      "placeId": [
+        {
+          "value": "fwedwf1223",
+          "date": "2025-04-04T10:30:00Z",
+          "responsible": "Kein"
+        }
+      ],
+      "subLocation": "Bin2",
+      "case": "few",
+      "status": "Stored",
+      "clientId": "fwee32r",
+      "createdAt": "2025-04-04T10:30:00Z",
+      "updatedAt": "2025-04-04T10:30:00Z"
+    },
+    {
+      "id": "red32e",
+      "missionId": "898dew",
+      "name": "Maister Satellite",
+      "mass": 70000,
+      "volume": 231,
+      "criticality": 5,
+      "placeId": [
+        {
+          "value": "fwedwf1223",
+          "date": "2025-04-04T10:30:00Z",
+          "responsible": "John"
+        }
+      ],
+      "subLocation": "Bin2",
+      "case": "few",
+      "status": "Delivered",
+      "clientId": "fwee32r",
+      "createdAt": "2025-04-04T10:30:00Z",
+      "updatedAt": "2025-04-04T10:30:00Z"
+    },
+    {
+      "id": "3edw8ouh",
+      "missionId": "898dew",
+      "name": "Mini Satellite",
+      "mass": 70000,
+      "volume": 231,
+      "criticality": 3,
+      "placeId": [
+        {
+          "value": "fwedwf1223",
+          "date": "2025-09-08T10:30:00Z",
+          "responsible": "John"
+        }
+      ],
+      "subLocation": "Bin2",
+      "case": "few",
+      "status": "Shipped",
+      "clientId": null,
+      "createdAt": "2025-09-08T10:30:00Z",
+      "updatedAt": "2025-09-08T10:30:00Z"
+    },
+    {
+      "id": "edwñl789",
+      "missionId": "898dew",
+      "name": "Home Satellite",
+      "mass": 312323,
+      "volume": 231,
+      "criticality": 7,
+      "placeId": [
+        {
+          "value": "fwedwf1223",
+          "date": "2025-09-08T10:30:00Z",
+          "responsible": "John",
+          "image": "https://c.files.bbci.co.uk/85C7/production/_104574243_gettyimages-182062885.jpg"
+        },
+        {
+          "value": "fewds87iy",
+          "date": "2025-09-08T10:30:00Z",
+          "responsible": "John",
+          "image": "https://imagenes.eleconomista.com.mx/files/image_1200_600/uploads/2020/01/29/66e84852b2d43.png"
+        }
+      ],
+      "subLocation": "Bin2",
+      "case": "few",
+      "status": "Stored",
+      "clientId": "fwee32r",
+      "createdAt": "2025-09-08T10:30:00Z",
+      "updatedAt": "2025-09-08T10:30:00Z"
+    },
+    {
+      "id": "efy87dy7ui",
+      "missionId": "ut6898e",
+      "name": "Oxygen Tank",
+      "mass": 5342,
+      "volume": 6543,
+      "criticality": 10,
+      "placeId": [
+        {
+          "value": "fwedwf1223",
+          "date": "2025-09-08T10:30:00Z",
+          "responsible": "John"
+        }
+      ],
+      "subLocation": "Bin2",
+      "case": "few",
+      "status": "Stored",
+      "clientId": "fwee32r",
+      "createdAt": "2025-09-08T10:30:00Z",
+      "updatedAt": "2025-09-08T10:30:00Z"
+    }
+  ],
+  "locations": [
+    {
+      "id": "fwedwf1223",
+      "name": "Hawthorne Warehouse",
+      "icon": "Warehouse"
+    },
+    {
+      "id": "fewds87iy",
+      "name": "Florida Warehouse",
+      "icon": "Warehouse"
+    }
+  ],
+  "isru": [
+    {
+      "id": "isru001",
+      "name": "Water Extraction Unit",
+      "missionId": "898dew",
+      "resourceType": "Water",
+      "productionCapacity": 500,
+      "status": "Operational",
+      "locationId": "fwedwf1223",
+      "createdAt": "2025-09-01T12:00:00Z",
+      "updatedAt": "2025-09-08T10:30:00Z"
+    },
+    {
+      "id": "isru002",
+      "name": "Oxygen Generator",
+      "missionId": "ut6898e",
+      "resourceType": "Oxygen",
+      "productionCapacity": 200,
+      "status": "In Testing",
+      "locationId": "fewds87iy",
+      "createdAt": "2025-09-01T12:00:00Z",
+      "updatedAt": "2025-09-08T10:30:00Z"
+    }
+  ],
+  "resourceUsage": [
+    {
+      "id": "usage001",
+      "missionId": "898dew",
+      "resourceType": "Water",
+      "consumptionRate": 100,
+      "durationEstimate": 5,
+      "description": "Crew water usage for hydration and systems, estimated to last 5 days per tank at full capacity.",
+      "linkedInventoryId": null,
+      "miningRequirement": 3000,
+      "createdAt": "2025-09-10T12:00:00Z",
+      "updatedAt": "2025-09-10T12:00:00Z"
+    },
+    {
+      "id": "usage002",
+      "missionId": "ut6898e",
+      "resourceType": "Oxygen",
+      "consumptionRate": 50,
+      "durationEstimate": 10,
+      "description": "Oxygen consumption for life support, estimated to deplete a standard tank in 10 days under normal conditions.",
+      "linkedInventoryId": "efy87dy7ui",
+      "miningRequirement": 1500,
+      "createdAt": "2025-09-10T12:00:00Z",
+      "updatedAt": "2025-09-10T12:00:00Z"
+    }
+  ],
+  "company": [
+    {
+      "id": "gvuy8798092p",
+      "name": "Spacex",
+      "userCount": 3,
+      "users": ["vrf423qw", "vr3421w", "th564re"],
+      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUBYrMz5cJ5bD8bzoZBpF9_qIpFNvNqdZsXQ&s"
+    }
+  ],
+  "users": {
+    "id": "vrf423qw",
+    "name": "Jeronimo",
+    "email": "moraljero@gmail.com",
+    "password": "A123",
+    "companyId": "gvuy8798092p",
+    "ipAdresses": [""],
+    "lastLogin": "",
+    "role": "admin",
+    "isVerified": true
+  }
+}
