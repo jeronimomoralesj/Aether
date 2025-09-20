@@ -712,7 +712,7 @@ export default function Home() {
               </span>
             </h2>
             <p className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed">
-              We're onboarding select aerospace OEMs and space suppliers into our early access program. 
+              We are onboarding select aerospace OEMs and space suppliers into our early access program. 
               Join the transformation revolutionizing how space missions get built and launched.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center max-w-lg sm:max-w-none mx-auto">
