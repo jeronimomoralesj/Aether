@@ -107,7 +107,7 @@ export default function Home() {
 
       <div className="min-h-screen bg-black text-white overflow-hidden">
         {/* Navigation - SEO optimized with semantic HTML */}
-        <nav className="fixed top-4 right-4 left-4 rounded-xl z-50 bg-black/80 backdrop-blur-xl border-b border-white/10" role="navigation" aria-label="Main navigation">
+        <nav className="fixed top-4 right-4 left-4 rounded-xl z-50 bg-black/280 backdrop-blur-xl border-b border-white/10" role="navigation" aria-label="Main navigation">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               {/* Logo Section */}
@@ -148,7 +148,7 @@ export default function Home() {
 
           {/* Mobile Menu */}
           {isMenuOpen && (
-            <div className="md:hidden bg-black/95 backdrop-blur-xl border-b border-white/10">
+            <div className="md:hidden bg-black/180 backdrop-blur-xl border-b border-white/10">
               <div className="px-2 pt-2 pb-3 space-y-1">
                 <a href="#solution" className="block px-3 py-2 hover:text-blue-400 transition-colors" onClick={() => setIsMenuOpen(false)}>Supply Chain Solution</a>
                 <a href="#how-it-works" className="block px-3 py-2 hover:text-blue-400 transition-colors" onClick={() => setIsMenuOpen(false)}>How It Works</a>
@@ -214,7 +214,7 @@ export default function Home() {
 
           {/* Hero Content - SEO Enhanced */}
           <div 
-            className="relative z-10 text-center max-w-6xl mx-auto px-4 pt-16"
+            className="relative z-10 text-center max-w-6xl mx-auto px-4 pt-26"
             style={{
               transform: parallaxStyles.contentTransform,
               willChange: 'transform'
@@ -232,7 +232,7 @@ export default function Home() {
                 Real-time tracking, predictive analytics, mission-critical reliability. Eliminate delays, 
                 reduce costs, ensure space mission success.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center max-w-lg sm:max-w-none mx-auto">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center max-w-lg sm:max-w-none mx-auto mb-20">
                 <button className="bg-white text-black px-8 sm:px-10 py-4 sm:py-5 rounded-full font-semibold text-base sm:text-lg hover:bg-gray-200 transition-all transform hover:scale-105 hover:shadow-2xl flex items-center justify-center group" aria-label="Request early access to space supply chain platform">
                   Request Early Access
                   <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -393,8 +393,8 @@ export default function Home() {
                         <div className="text-xs text-gray-400">Average Delay</div>
                       </div>
                       <div className="p-3 rounded-xl bg-yellow-500/10 border border-yellow-500/20">
-                        <div className="text-2xl font-bold text-yellow-400">$2B</div>
-                        <div className="text-xs text-gray-400">Annual Loss</div>
+                        <div className="text-2xl font-bold text-yellow-400">$28B+</div>
+                        <div className="text-xs text-gray-400">NASA project overruns (past decade, GAO)</div>
                       </div>
                     </div>
                   </div>
@@ -559,7 +559,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Social Proof Section */}
+        {/* 
         <section className="py-16 sm:py-32 bg-gradient-to-b from-gray-900 to-black relative" aria-labelledby="social-proof-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <header className="text-center mb-12 sm:mb-20">
@@ -608,7 +608,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-
+        Social Proof Section */}
+        
         {/* Network Advantage Section */}
         <section id="network" className="py-16 sm:py-32 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden" aria-labelledby="network-heading">
           <div className="absolute inset-0 opacity-10">
@@ -685,7 +686,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/*
         <section id="contact" className="py-16 sm:py-32 bg-gradient-to-r from-blue-900/30 via-purple-900/30 to-cyan-900/30 backdrop-blur-sm border-y border-white/10 relative overflow-hidden" aria-labelledby="cta-heading">
           <div className="absolute inset-0 opacity-20">
             {[...Array(30)].map((_, i) => (
@@ -724,7 +725,6 @@ export default function Home() {
               </button>
             </div>
 
-            {/* Trust Indicators */}
             <div className="mt-12 sm:mt-16">
               <p className="text-gray-400 text-sm mb-6">Trusted by leading aerospace and space companies</p>
               <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
@@ -738,12 +738,14 @@ export default function Home() {
           </div>
         </section>
 
+          CTA Section */}
+
         {/* Benefits Section */}
         <section className="py-16 sm:py-32 bg-gradient-to-b from-gray-900 to-black relative" aria-labelledby="benefits-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <header className="text-center mb-12 sm:mb-20">
               <h2 id="benefits-heading" className="text-3xl sm:text-5xl md:text-6xl font-bold mb-6 sm:mb-8 leading-tight">
-                Why Aerospace Industry Leaders
+                Why You Must
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent block">
                   Choose Our Space Supply Chain Platform
                 </span>
@@ -831,7 +833,7 @@ export default function Home() {
               {/* Logo and Description */}
               <div className="lg:col-span-2">
                 <div className="flex items-center mb-6">
-                  <div className="relative w-18 h-18 mr-3">
+                  <div className="relative w-38 h-8 mr-3">
                     <Image 
                       alt="Space Supply Chain Platform Logo"
                       src={logo_black}
@@ -845,6 +847,7 @@ export default function Home() {
                   Revolutionizing aerospace supply chains with AI-powered insights, real-time collaboration, 
                   and predictive analytics. Built for the future of space exploration and mission success.
                 </p>
+                {/*
                 <div className="flex space-x-4">
                   <a href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors" aria-label="LinkedIn">
                     <span className="text-sm font-bold">Li</span>
@@ -856,8 +859,9 @@ export default function Home() {
                     <span className="text-sm font-bold">Gh</span>
                   </a>
                 </div>
+                */}
               </div>
-
+        
               {/* Product Links */}
               <div>
                 <h3 className="text-lg font-semibold mb-4">Aerospace Solutions</h3>
