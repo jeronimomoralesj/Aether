@@ -107,12 +107,12 @@ export default function Home() {
 
       <div className="min-h-screen bg-black text-white overflow-hidden">
         {/* Navigation - SEO optimized with semantic HTML */}
-        <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/10" role="navigation" aria-label="Main navigation">
+        <nav className="fixed top-4 right-4 left-4 rounded-xl z-50 bg-black/80 backdrop-blur-xl border-b border-white/10" role="navigation" aria-label="Main navigation">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               {/* Logo Section */}
               <div className="flex items-center">
-                <div className="relative w-8 h-8 sm:w-10 sm:h-10">
+                <div className="relative w-25 h-25">
                   <Image 
                     alt="Space Supply Chain Platform Logo"
                     src={logo_black}
@@ -121,7 +121,6 @@ export default function Home() {
                     priority
                   />
                 </div>
-                <span className="ml-2 text-lg font-bold hidden sm:block">Space Supply Chain</span>
               </div>
 
               {/* Desktop Menu */}
@@ -249,7 +248,6 @@ export default function Home() {
           {/* Scroll Indicator */}
           <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10 hidden sm:block">
             <div className="flex flex-col items-center">
-              <span className="text-sm text-gray-400 mb-2">Discover aerospace solutions</span>
               <ChevronDown className="w-8 h-8 text-white/70" />
             </div>
           </div>
@@ -833,7 +831,7 @@ export default function Home() {
               {/* Logo and Description */}
               <div className="lg:col-span-2">
                 <div className="flex items-center mb-6">
-                  <div className="relative w-8 h-8 mr-3">
+                  <div className="relative w-18 h-18 mr-3">
                     <Image 
                       alt="Space Supply Chain Platform Logo"
                       src={logo_black}
@@ -842,7 +840,6 @@ export default function Home() {
                       priority
                     />
                   </div>
-                  <span className="text-xl font-bold">Space Supply Chain Platform</span>
                 </div>
                 <p className="text-gray-400 mb-6 max-w-md">
                   Revolutionizing aerospace supply chains with AI-powered insights, real-time collaboration, 
