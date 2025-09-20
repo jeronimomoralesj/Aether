@@ -107,12 +107,12 @@ export default function Home() {
 
       <div className="min-h-screen bg-black text-white overflow-hidden">
         {/* Navigation - SEO optimized with semantic HTML */}
-        <nav className="fixed top-5 right-4 rounded-xl left-4 z-50 bg-black/80 backdrop-blur-xl border-b border-white/10" role="navigation" aria-label="Main navigation">
+        <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-white/10" role="navigation" aria-label="Main navigation">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
               {/* Logo Section */}
               <div className="flex items-center">
-                <div className="relative w-28 h-28">
+                <div className="relative w-8 h-8 sm:w-10 sm:h-10">
                   <Image 
                     alt="Space Supply Chain Platform Logo"
                     src={logo_black}
@@ -121,6 +121,7 @@ export default function Home() {
                     priority
                   />
                 </div>
+                <span className="ml-2 text-lg font-bold hidden sm:block">Space Supply Chain</span>
               </div>
 
               {/* Desktop Menu */}
@@ -366,7 +367,7 @@ export default function Home() {
                     </div>
 
                     <blockquote className="relative">
-                      <div className="absolute -top-2 -left-2 text-4xl text-red-400/30">"</div>
+                      <div className="absolute -top-2 -left-2 text-4xl text-red-400/30">&ldquo;</div>
                       <div className="bg-gradient-to-br from-red-500/10 to-transparent rounded-2xl p-6 border border-red-500/20">
                         <p className="text-gray-300 italic text-lg leading-relaxed mb-4">
                           When tier-2 aerospace suppliers experience delays, OEMs remain unaware 
@@ -381,7 +382,7 @@ export default function Home() {
                           </div>
                         </div>
                       </div>
-                      <div className="absolute -bottom-2 -right-2 text-4xl text-red-400/30 transform rotate-180">"</div>
+                      <div className="absolute -bottom-2 -right-2 text-4xl text-red-400/30 transform rotate-180">&rdquo;</div>
                     </blockquote>
 
                     <div className="mt-8 grid grid-cols-3 gap-4 text-center">
@@ -582,7 +583,7 @@ export default function Home() {
                   <div>
                     <h3 className="text-xl font-bold text-red-400 mb-2">NASA Inspector General</h3>
                     <p className="text-gray-300 italic">
-                      "Space launch delays due to aerospace supply chain constraints have cost billions in program overruns."
+                      &ldquo;Space launch delays due to aerospace supply chain constraints have cost billions in program overruns.&rdquo;
                     </p>
                   </div>
                 </div>
@@ -594,7 +595,7 @@ export default function Home() {
                   <div>
                     <h3 className="text-xl font-bold text-blue-400 mb-2">GAO Aerospace Reports</h3>
                     <p className="text-gray-300 italic">
-                      "Delays in tier-2/3 aerospace suppliers create cascading failures across space programs."
+                      &ldquo;Delays in tier-2/3 aerospace suppliers create cascading failures across space programs.&rdquo;
                     </p>
                   </div>
                 </div>
