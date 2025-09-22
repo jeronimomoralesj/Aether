@@ -967,7 +967,7 @@ export default function Home() {
                 </button>
 
                 <p className="text-gray-400 text-sm mt-4 text-center">
-                  We'll notify you when early access becomes available. No spam, ever.
+                  We will notify you when early access becomes available. No spam, ever.
                 </p>
               </form>
             </div>
