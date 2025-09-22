@@ -952,7 +952,6 @@ export default function Home() {
                   <textarea
                     id="challenges"
                     name="challenges"
-                    rows="4"
                     className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all resize-none"
                     placeholder="Describe your biggest aerospace supply chain pain points..."
                   ></textarea>
