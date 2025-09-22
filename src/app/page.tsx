@@ -106,13 +106,13 @@ export default function Home() {
       </head>
 
       <div className="min-h-screen bg-black text-white overflow-hidden">
-        {/* Navigation - SEO optimized with semantic HTML */}
-        <nav className="fixed top-4 right-4 left-4 rounded-xl z-50 bg-black/280 backdrop-blur-xl border-b border-white/10" role="navigation" aria-label="Main navigation">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16">
+        {/* Navigation - Improved Mobile Experience */}
+        <nav className="fixed top-2 sm:top-4 right-2 sm:right-4 left-2 sm:left-4 rounded-xl z-50 bg-black/280 backdrop-blur-xl border-b border-white/10" role="navigation" aria-label="Main navigation">
+          <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center h-14 sm:h-16">
               {/* Logo Section */}
               <div className="flex items-center">
-                <div className="relative w-25 h-25">
+                <div className="relative w-25 sm:w-35 h-30 sm:h-35">
                   <Image 
                     alt="Space Supply Chain Platform Logo"
                     src={logo_black}
@@ -124,48 +124,48 @@ export default function Home() {
               </div>
 
               {/* Desktop Menu */}
-              <div className="hidden md:flex items-center space-x-8">
-                <a href="#solution" className="hover:text-blue-400 transition-colors" aria-label="Learn about our aerospace supply chain solution">Supply Chain Solution</a>
-                <a href="#how-it-works" className="hover:text-blue-400 transition-colors" aria-label="How our space logistics platform works">How It Works</a>
-                <a href="#network" className="hover:text-blue-400 transition-colors" aria-label="Aerospace supplier network advantages">Supplier Network</a>
-                <a href="#contact" className="hover:text-blue-400 transition-colors" aria-label="Contact us about space supply chain management">Contact</a>
-                <button className="bg-white text-black px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition-all transform hover:scale-105" aria-label="Request early access to space supply chain platform">
+              <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+                <a href="#solution" className="hover:text-blue-400 transition-colors text-sm lg:text-base" aria-label="Learn about our aerospace supply chain solution">Supply Chain Solution</a>
+                <a href="#how-it-works" className="hover:text-blue-400 transition-colors text-sm lg:text-base" aria-label="How our space logistics platform works">How It Works</a>
+                <a href="#network" className="hover:text-blue-400 transition-colors text-sm lg:text-base" aria-label="Aerospace supplier network advantages">Supplier Network</a>
+                <a href="#form" className="hover:text-blue-400 transition-colors text-sm lg:text-base" aria-label="Contact us about space supply chain management">Contact</a>
+                <a href='#form'><button className="bg-white text-black px-4 lg:px-6 py-2 rounded-full font-medium text-sm lg:text-base hover:bg-gray-200 transition-all transform hover:scale-105" aria-label="Request early access to space supply chain platform">
                   Request Early Access
-                </button>
+                </button></a>
               </div>
 
               {/* Mobile Menu Button */}
               <button 
-                className="md:hidden"
+                className="md:hidden p-2"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 aria-label="Toggle navigation menu"
                 aria-expanded={isMenuOpen}
               >
-                {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
             </div>
           </div>
 
-          {/* Mobile Menu */}
+          {/* Mobile Menu - Improved */}
           {isMenuOpen && (
-            <div className="md:hidden bg-black/180 backdrop-blur-xl border-b border-white/10">
-              <div className="px-2 pt-2 pb-3 space-y-1">
-                <a href="#solution" className="block px-3 py-2 hover:text-blue-400 transition-colors" onClick={() => setIsMenuOpen(false)}>Supply Chain Solution</a>
-                <a href="#how-it-works" className="block px-3 py-2 hover:text-blue-400 transition-colors" onClick={() => setIsMenuOpen(false)}>How It Works</a>
-                <a href="#network" className="block px-3 py-2 hover:text-blue-400 transition-colors" onClick={() => setIsMenuOpen(false)}>Supplier Network</a>
-                <a href="#contact" className="block px-3 py-2 hover:text-blue-400 transition-colors" onClick={() => setIsMenuOpen(false)}>Contact</a>
+            <div className="md:hidden bg-black/90 backdrop-blur-xl border-b border-white/10">
+              <div className="px-4 pt-2 pb-3 space-y-1">
+                <a href="#solution" className="block px-3 py-3 hover:text-blue-400 transition-colors text-base" onClick={() => setIsMenuOpen(false)}>Supply Chain Solution</a>
+                <a href="#how-it-works" className="block px-3 py-3 hover:text-blue-400 transition-colors text-base" onClick={() => setIsMenuOpen(false)}>How It Works</a>
+                <a href="#network" className="block px-3 py-3 hover:text-blue-400 transition-colors text-base" onClick={() => setIsMenuOpen(false)}>Supplier Network</a>
+                <a href="#form" className="block px-3 py-3 hover:text-blue-400 transition-colors text-base" onClick={() => setIsMenuOpen(false)}>Contact</a>
                 <div className="px-3 pt-4 pb-2">
-                  <button className="w-full bg-white text-black px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition-colors">
+                  <a href='#form'><button className="w-full bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-200 transition-colors text-base">
                     Request Early Access
-                  </button>
+                  </button></a>
                 </div>
               </div>
             </div>
           )}
         </nav>
 
-        {/* Hero Section - Enhanced SEO */}
-        <section className="relative h-screen flex items-center justify-center overflow-hidden" aria-labelledby="hero-heading">
+        {/* Hero Section - Mobile Optimized */}
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-labelledby="hero-heading">
           {/* Optimized Background Image */}
           <div className="absolute inset-0">
             <div 
@@ -212,98 +212,102 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Hero Content - SEO Enhanced */}
+          {/* Hero Content - Mobile Optimized */}
           <div 
-            className="relative z-10 text-center max-w-6xl mx-auto px-4 pt-26"
+            className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 md:pt-26"
             style={{
               transform: parallaxStyles.contentTransform,
               willChange: 'transform'
             }}
           >
             <div className="animate-fade-in-up">
-              <h1 id="hero-heading" className="text-4xl sm:text-6xl md:text-8xl font-bold mb-6 sm:mb-8 tracking-tight leading-none">
+              <h1 id="hero-heading" className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6 md:mb-8 tracking-tight leading-none">
                 Space Industry Supply Chain
-                <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent block mt-2">
+                <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent block mt-1 sm:mt-2">
                   Management Platform
                 </span>
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 sm:mb-12 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-6 sm:mb-8 md:mb-12 max-w-4xl mx-auto leading-relaxed px-2">
                 AI-powered aerospace supply chain optimization for OEMs, manufacturers, and suppliers. 
                 Real-time tracking, predictive analytics, mission-critical reliability. Eliminate delays, 
                 reduce costs, ensure space mission success.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center max-w-lg sm:max-w-none mx-auto mb-20">
-                <button className="bg-white text-black px-8 sm:px-10 py-4 sm:py-5 rounded-full font-semibold text-base sm:text-lg hover:bg-gray-200 transition-all transform hover:scale-105 hover:shadow-2xl flex items-center justify-center group" aria-label="Request early access to space supply chain platform">
-                  Request Early Access
-                  <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </button>
-                <button className="border-2 border-white px-8 sm:px-10 py-4 sm:py-5 rounded-full font-semibold text-base sm:text-lg hover:bg-white hover:text-black transition-all transform hover:scale-105 flex items-center justify-center" aria-label="See how aerospace supply chain management works">
-                  See How It Works
-                  <ArrowRight className="ml-3 w-5 h-5" />
-                </button>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center max-w-lg sm:max-w-none mx-auto mb-12 sm:mb-16 md:mb-20 px-4">
+                <a href='#form' className="w-full sm:w-auto">
+                  <button className="w-full bg-white text-black px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-full font-semibold text-sm sm:text-base md:text-lg hover:bg-gray-200 transition-all transform hover:scale-105 hover:shadow-2xl flex items-center justify-center group" aria-label="Request early access to space supply chain platform">
+                    Request Early Access
+                    <ArrowRight className="ml-2 sm:ml-3 w-4 sm:w-5 h-4 sm:h-5 group-hover:translate-x-1 transition-transform" />
+                  </button>
+                </a>
+                <a href='#how-it-works' className="w-full sm:w-auto">
+                  <button className="w-full border-2 border-white px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-full font-semibold text-sm sm:text-base md:text-lg hover:bg-white hover:text-black transition-all transform hover:scale-105 flex items-center justify-center" aria-label="See how aerospace supply chain management works">
+                    See How It Works
+                    <ArrowRight className="ml-2 sm:ml-3 w-4 sm:w-5 h-4 sm:h-5" />
+                  </button>
+                </a>
               </div>
             </div>
           </div>
 
           {/* Scroll Indicator */}
-          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10 hidden sm:block">
+          <div className="absolute bottom-6 sm:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce z-10">
             <div className="flex flex-col items-center">
-              <ChevronDown className="w-8 h-8 text-white/70" />
+              <ChevronDown className="w-6 sm:w-8 h-6 sm:h-8 text-white/70" />
             </div>
           </div>
         </section>
 
-        {/* Problem Section - Enhanced SEO */}
-        <section className="py-16 sm:py-32 bg-gradient-to-b from-black via-red-950/10 to-gray-900 relative overflow-hidden" aria-labelledby="problem-heading">
+        {/* Problem Section - Mobile Optimized */}
+        <section className="py-12 sm:py-16 md:py-24 lg:py-32 bg-gradient-to-b from-black via-red-950/10 to-gray-900 relative overflow-hidden" aria-labelledby="problem-heading">
           {/* Optimized background animations */}
           <div className="absolute inset-0 opacity-20">
-            <div className="absolute top-20 left-10 w-32 h-32 bg-red-500 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-40 right-20 w-48 h-48 bg-orange-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-red-600 rounded-full blur-3xl animate-pulse opacity-30" style={{ animationDelay: '4s' }}></div>
+            <div className="absolute top-10 sm:top-20 left-5 sm:left-10 w-20 sm:w-32 h-20 sm:h-32 bg-red-500 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-20 sm:bottom-40 right-10 sm:right-20 w-32 sm:w-48 h-32 sm:h-48 bg-orange-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 sm:w-64 h-40 sm:h-64 bg-red-600 rounded-full blur-3xl animate-pulse opacity-30" style={{ animationDelay: '4s' }}></div>
           </div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="text-center mb-16 sm:mb-24">
-              <div className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-red-500/20 border border-red-500/30 mb-8">
-                <AlertTriangle className="w-5 h-5 text-red-400 mr-2" />
-                <span className="text-red-300 text-sm font-semibold">AEROSPACE SUPPLY CHAIN CRISIS</span>
+            <div className="text-center mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+              <div className="inline-flex items-center justify-center px-3 sm:px-4 py-2 rounded-full bg-red-500/20 border border-red-500/30 mb-6 sm:mb-8">
+                <AlertTriangle className="w-4 sm:w-5 h-4 sm:h-5 text-red-400 mr-2" />
+                <span className="text-red-300 text-xs sm:text-sm font-semibold">AEROSPACE SUPPLY CHAIN CRISIS</span>
               </div>
-              <h2 id="problem-heading" className="text-4xl sm:text-6xl md:text-8xl font-bold mb-8 leading-tight">
+              <h2 id="problem-heading" className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 sm:mb-8 leading-tight">
                 <span className="bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent">
                   Space Mission Delays
                 </span>
                 <br />
                 <span className="text-white">Cost Billions</span>
               </h2>
-              <p className="text-xl sm:text-2xl text-gray-400 max-w-3xl mx-auto">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto px-2">
                 Aerospace supply chain disruptions cause cascade failures across space programs, 
                 delaying launches and burning through budgets
               </p>
             </div>
 
-            {/* Problem visualization with better structure */}
+            {/* Problem visualization with better mobile structure */}
             <div className="relative">
-              <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-red-400 to-transparent transform -translate-x-0.5 z-10">
+              <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-red-400 to-transparent transform -translate-x-0.5 z-10">
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
                   <X className="w-4 h-4 text-white" />
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16">
                 {/* Problem cascade */}
                 <article className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                  <div className="relative bg-gradient-to-br from-red-900/40 to-orange-900/40 backdrop-blur-xl rounded-3xl p-8 sm:p-10 border border-red-500/30 hover:border-red-400/50 transition-all duration-500 group-hover:transform group-hover:scale-[1.02]">
-                    <header className="flex items-center mb-8">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center mr-4">
-                        <AlertTriangle className="w-6 h-6 text-white" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl sm:rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                  <div className="relative bg-gradient-to-br from-red-900/40 to-orange-900/40 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 border border-red-500/30 hover:border-red-400/50 transition-all duration-500 group-hover:transform group-hover:scale-[1.02]">
+                    <header className="flex items-center mb-6 sm:mb-8">
+                      <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center mr-3 sm:mr-4 flex-shrink-0">
+                        <AlertTriangle className="w-5 sm:w-6 h-5 sm:h-6 text-white" />
                       </div>
-                      <h3 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-red-300 to-orange-300 bg-clip-text text-transparent">
+                      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-red-300 to-orange-300 bg-clip-text text-transparent leading-tight">
                         Supply Chain Cascade Failures
                       </h3>
                     </header>
                     
-                    <div className="space-y-6">
+                    <div className="space-y-4 sm:space-y-6">
                       {[
                         { icon: "📊", text: "Disconnected aerospace supplier data across departments", delay: "0s" },
                         { icon: "📧", text: "Mission-critical updates lost in email chains", delay: "0.5s" },
@@ -313,20 +317,20 @@ export default function Home() {
                       ].map((item, index) => (
                         <div 
                           key={index}
-                          className="flex items-center space-x-4 animate-fade-in-left"
+                          className="flex items-center space-x-3 sm:space-x-4 animate-fade-in-left"
                           style={{ animationDelay: item.delay }}
                         >
-                          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-red-500/30 to-orange-500/30 border border-red-400/30 flex items-center justify-center text-lg">
+                          <div className="w-8 sm:w-10 h-8 sm:h-10 rounded-full bg-gradient-to-br from-red-500/30 to-orange-500/30 border border-red-400/30 flex items-center justify-center text-base sm:text-lg flex-shrink-0">
                             {item.icon}
                           </div>
-                          <p className="text-gray-300 text-lg leading-relaxed">{item.text}</p>
-                          <div className="flex-1 h-px bg-gradient-to-r from-red-500/50 to-transparent"></div>
+                          <p className="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed">{item.text}</p>
+                          <div className="flex-1 h-px bg-gradient-to-r from-red-500/50 to-transparent hidden sm:block"></div>
                         </div>
                       ))}
                     </div>
 
-                    <div className="mt-8 p-4 rounded-xl bg-red-500/10 border border-red-500/20 animate-pulse">
-                      <p className="text-red-300 text-center font-medium">
+                    <div className="mt-6 sm:mt-8 p-3 sm:p-4 rounded-xl bg-red-500/10 border border-red-500/20 animate-pulse">
+                      <p className="text-red-300 text-center font-medium text-sm sm:text-base">
                         One aerospace supplier delay = Complete mission failure
                       </p>
                     </div>
@@ -335,65 +339,65 @@ export default function Home() {
 
                 {/* Financial impact */}
                 <article className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-gray-500/10 to-black/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
-                  <div className="relative bg-gradient-to-br from-gray-900/60 to-black/80 backdrop-blur-xl rounded-3xl p-8 sm:p-10 border border-white/20 hover:border-white/30 transition-all duration-500 group-hover:transform group-hover:scale-[1.02]">
+                  <div className="absolute inset-0 bg-gradient-to-br from-gray-500/10 to-black/20 rounded-2xl sm:rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                  <div className="relative bg-gradient-to-br from-gray-900/60 to-black/80 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 border border-white/20 hover:border-white/30 transition-all duration-500 group-hover:transform group-hover:scale-[1.02]">
                     
-                    <div className="text-center mb-8">
+                    <div className="text-center mb-6 sm:mb-8">
                       <div className="relative inline-block">
-                        <div className="w-20 h-20 rounded-full bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center mb-4 mx-auto">
-                          <Rocket className="w-10 h-10 text-gray-400 transform rotate-45" />
+                        <div className="w-16 sm:w-20 h-16 sm:h-20 rounded-full bg-gradient-to-br from-gray-600 to-gray-800 flex items-center justify-center mb-3 sm:mb-4 mx-auto">
+                          <Rocket className="w-8 sm:w-10 h-8 sm:h-10 text-gray-400 transform rotate-45" />
                         </div>
-                        <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-1 h-12 bg-gradient-to-b from-gray-500 to-gray-700"></div>
-                        <div className="absolute -bottom-14 left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-gradient-to-br from-gray-600 to-gray-800 border-2 border-gray-500 flex items-center justify-center">
-                          <div className="w-3 h-3 rounded-full bg-gray-500"></div>
+                        <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-1 h-8 sm:h-12 bg-gradient-to-b from-gray-500 to-gray-700"></div>
+                        <div className="absolute -bottom-10 sm:-bottom-14 left-1/2 transform -translate-x-1/2 w-6 sm:w-8 h-6 sm:h-8 rounded-full bg-gradient-to-br from-gray-600 to-gray-800 border-2 border-gray-500 flex items-center justify-center">
+                          <div className="w-2 sm:w-3 h-2 sm:h-3 rounded-full bg-gray-500"></div>
                         </div>
                       </div>
-                      <h3 className="text-3xl sm:text-4xl font-bold text-white mb-2">Space Missions Grounded</h3>
-                      <p className="text-gray-400">Dreams deferred, aerospace programs delayed</p>
+                      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">Space Missions Grounded</h3>
+                      <p className="text-gray-400 text-sm sm:text-base">Dreams deferred, aerospace programs delayed</p>
                     </div>
 
-                    <div className="text-center mb-8">
-                      <div className="text-6xl sm:text-7xl font-bold bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent mb-4 animate-pulse">
+                    <div className="text-center mb-6 sm:mb-8">
+                      <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent mb-3 sm:mb-4 animate-pulse">
                         $50M+
                       </div>
-                      <p className="text-gray-400 text-lg mb-2">Per delayed space launch</p>
+                      <p className="text-gray-400 text-base sm:text-lg mb-2">Per delayed space launch</p>
                       
-                      <div className="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-red-500/20 border border-red-500/30">
+                      <div className="inline-flex items-center space-x-2 px-3 sm:px-4 py-2 rounded-full bg-red-500/20 border border-red-500/30">
                         <div className="w-2 h-2 rounded-full bg-red-400 animate-pulse"></div>
-                        <span className="text-red-300 text-sm font-mono">AEROSPACE COSTS RISING</span>
+                        <span className="text-red-300 text-xs sm:text-sm font-mono">AEROSPACE COSTS RISING</span>
                       </div>
                     </div>
 
                     <blockquote className="relative">
-                      <div className="absolute -top-2 -left-2 text-4xl text-red-400/30">&ldquo;</div>
-                      <div className="bg-gradient-to-br from-red-500/10 to-transparent rounded-2xl p-6 border border-red-500/20">
-                        <p className="text-gray-300 italic text-lg leading-relaxed mb-4">
+                      <div className="absolute -top-2 -left-2 text-2xl sm:text-4xl text-red-400/30">&ldquo;</div>
+                      <div className="bg-gradient-to-br from-red-500/10 to-transparent rounded-2xl p-4 sm:p-6 border border-red-500/20">
+                        <p className="text-gray-300 italic text-sm sm:text-base md:text-lg leading-relaxed mb-3 sm:mb-4">
                           When tier-2 aerospace suppliers experience delays, OEMs remain unaware 
                           for months, causing cascade failures across entire space programs.
                         </p>
                         <div className="flex items-center justify-between">
-                          <div className="text-red-400 font-bold">Result:</div>
-                          <div className="text-right text-gray-400 text-sm">
+                          <div className="text-red-400 font-bold text-sm sm:text-base">Result:</div>
+                          <div className="text-right text-gray-400 text-xs sm:text-sm">
                             Launch windows missed<br/>
                             Engineers idle<br/>
                             Billions lost
                           </div>
                         </div>
                       </div>
-                      <div className="absolute -bottom-2 -right-2 text-4xl text-red-400/30 transform rotate-180">&rdquo;</div>
+                      <div className="absolute -bottom-2 -right-2 text-2xl sm:text-4xl text-red-400/30 transform rotate-180">&rdquo;</div>
                     </blockquote>
 
-                    <div className="mt-8 grid grid-cols-3 gap-4 text-center">
-                      <div className="p-3 rounded-xl bg-red-500/10 border border-red-500/20">
-                        <div className="text-2xl font-bold text-red-400">73%</div>
+                    <div className="mt-6 sm:mt-8 grid grid-cols-3 gap-2 sm:gap-4 text-center">
+                      <div className="p-2 sm:p-3 rounded-xl bg-red-500/10 border border-red-500/20">
+                        <div className="text-lg sm:text-2xl font-bold text-red-400">73%</div>
                         <div className="text-xs text-gray-400">Space Projects Delayed</div>
                       </div>
-                      <div className="p-3 rounded-xl bg-orange-500/10 border border-orange-500/20">
-                        <div className="text-2xl font-bold text-orange-400">6mo</div>
+                      <div className="p-2 sm:p-3 rounded-xl bg-orange-500/10 border border-orange-500/20">
+                        <div className="text-lg sm:text-2xl font-bold text-orange-400">6mo</div>
                         <div className="text-xs text-gray-400">Average Delay</div>
                       </div>
-                      <div className="p-3 rounded-xl bg-yellow-500/10 border border-yellow-500/20">
-                        <div className="text-2xl font-bold text-yellow-400">$28B+</div>
+                      <div className="p-2 sm:p-3 rounded-xl bg-yellow-500/10 border border-yellow-500/20">
+                        <div className="text-lg sm:text-2xl font-bold text-yellow-400">$28B+</div>
                         <div className="text-xs text-gray-400">NASA project overruns (past decade, GAO)</div>
                       </div>
                     </div>
@@ -402,9 +406,9 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="mt-16 text-center">
-              <div className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 backdrop-blur-sm">
-                <span className="text-red-300 font-semibold text-lg">
+            <div className="mt-12 sm:mt-16 text-center">
+              <div className="inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 backdrop-blur-sm">
+                <span className="text-red-300 font-semibold text-sm sm:text-base md:text-lg">
                   Disconnected aerospace supply chains = Grounded space missions
                 </span>
               </div>
@@ -412,22 +416,22 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Solution Section - SEO Enhanced */}
-        <section id="solution" className="py-16 sm:py-32 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden" aria-labelledby="solution-heading">
+        {/* Solution Section - Mobile Optimized */}
+        <section id="solution" className="py-12 sm:py-16 md:py-24 lg:py-32 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden" aria-labelledby="solution-heading">
           <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-20 left-20 w-64 h-64 bg-blue-500 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-20 right-20 w-96 h-96 bg-purple-500 rounded-full blur-3xl"></div>
+            <div className="absolute top-10 sm:top-20 left-10 sm:left-20 w-32 sm:w-64 h-32 sm:h-64 bg-blue-500 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-10 sm:bottom-20 right-10 sm:right-20 w-48 sm:w-96 h-48 sm:h-96 bg-purple-500 rounded-full blur-3xl"></div>
           </div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <header className="text-center mb-12 sm:mb-20">
-              <h2 id="solution-heading" className="text-3xl sm:text-5xl md:text-6xl font-bold mb-6 sm:mb-8 leading-tight">
+            <header className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20">
+              <h2 id="solution-heading" className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight">
                 Collaborative Aerospace Platform for
                 <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent block">
                   Space Supply Chain Management
                 </span>
               </h2>
-              <p className="text-lg sm:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed px-2">
                 Unified aerospace supply chain data platform connecting suppliers, OEMs, and manufacturers. 
                 Real-time lead times, capacity tracking, delay alerts, and logistics optimization. 
                 AI-powered predictions prevent failures before they impact space missions.
@@ -435,29 +439,29 @@ export default function Home() {
             </header>
 
             <div className="relative">
-              <div className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 rounded-3xl p-8 sm:p-12 border border-white/10 backdrop-blur-sm">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-gradient-to-br from-blue-900/20 to-purple-900/20 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 border border-white/10 backdrop-blur-sm">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
                   <article className="text-center">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 mb-6">
-                      <Rocket className="w-8 h-8 text-white" />
+                    <div className="inline-flex items-center justify-center w-12 sm:w-16 h-12 sm:h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 mb-4 sm:mb-6">
+                      <Rocket className="w-6 sm:w-8 h-6 sm:h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold mb-4">Aerospace OEMs & Primes</h3>
+                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Aerospace OEMs & Primes</h3>
                     <p className="text-gray-400 text-sm">Real-time visibility into entire space industry supplier networks</p>
                   </article>
 
                   <article className="text-center">
-                    <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-gradient-to-br from-purple-500 to-pink-400 mb-6 mx-auto">
-                      <Network className="w-10 h-10 text-white" />
+                    <div className="inline-flex items-center justify-center w-16 sm:w-20 h-16 sm:h-20 rounded-3xl bg-gradient-to-br from-purple-500 to-pink-400 mb-4 sm:mb-6 mx-auto">
+                      <Network className="w-8 sm:w-10 h-8 sm:h-10 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold mb-4">Unified Space Supply Chain Platform</h3>
+                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Unified Space Supply Chain Platform</h3>
                     <p className="text-gray-400 text-sm">Single source of truth with AI-powered aerospace logistics insights</p>
                   </article>
 
                   <article className="text-center">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-400 mb-6">
-                      <Monitor className="w-8 h-8 text-white" />
+                    <div className="inline-flex items-center justify-center w-12 sm:w-16 h-12 sm:h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-400 mb-4 sm:mb-6">
+                      <Monitor className="w-6 sm:w-8 h-6 sm:h-8 text-white" />
                     </div>
-                    <h3 className="text-xl font-bold mb-4">Aerospace Suppliers</h3>
+                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Aerospace Suppliers</h3>
                     <p className="text-gray-400 text-sm">Streamlined reporting and space industry collaboration tools</p>
                   </article>
                 </div>
@@ -484,74 +488,74 @@ export default function Home() {
           </div>
         </section>
 
-        {/* How It Works Section */}
-        <section id="how-it-works" className="py-16 sm:py-32 bg-gradient-to-b from-black to-gray-900 relative" aria-labelledby="how-it-works-heading">
+        {/* How It Works Section - Mobile Optimized */}
+        <section id="how-it-works" className="py-12 sm:py-16 md:py-24 lg:py-32 bg-gradient-to-b from-black to-gray-900 relative" aria-labelledby="how-it-works-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <header className="text-center mb-12 sm:mb-20">
-              <h2 id="how-it-works-heading" className="text-3xl sm:text-5xl md:text-6xl font-bold mb-6 sm:mb-8 leading-tight">
+            <header className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20">
+              <h2 id="how-it-works-heading" className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight">
                 From Aerospace Data to Decisions,
                 <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent block">
                   Seamlessly Optimized
                 </span>
               </h2>
-              <p className="text-lg sm:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed px-2">
                 Our space supply chain management system transforms raw aerospace data into actionable insights
               </p>
             </header>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               {/* Step 1 */}
               <article className="text-center group">
-                <div className="relative mb-6">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 group-hover:scale-110 transition-transform">
-                    <Database className="w-8 h-8 text-white" />
+                <div className="relative mb-4 sm:mb-6">
+                  <div className="inline-flex items-center justify-center w-12 sm:w-16 h-12 sm:h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-400 group-hover:scale-110 transition-transform">
+                    <Database className="w-6 sm:w-8 h-6 sm:h-8 text-white" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-blue-400 text-black text-xs font-bold flex items-center justify-center">1</div>
+                  <div className="absolute -top-2 -right-2 w-5 sm:w-6 h-5 sm:h-6 rounded-full bg-blue-400 text-black text-xs font-bold flex items-center justify-center">1</div>
                 </div>
-                <h3 className="text-lg font-bold mb-3">Aerospace Data Input</h3>
-                <p className="text-gray-400 text-sm">
+                <h3 className="text-base sm:text-lg font-bold mb-2 sm:mb-3">Aerospace Data Input</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
                   Space suppliers and OEMs input order statuses, capacity forecasts, manufacturing data
                 </p>
               </article>
 
               {/* Step 2 */}
               <article className="text-center group">
-                <div className="relative mb-6">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-400 group-hover:scale-110 transition-transform">
-                    <Brain className="w-8 h-8 text-white" />
+                <div className="relative mb-4 sm:mb-6">
+                  <div className="inline-flex items-center justify-center w-12 sm:w-16 h-12 sm:h-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-400 group-hover:scale-110 transition-transform">
+                    <Brain className="w-6 sm:w-8 h-6 sm:h-8 text-white" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-purple-400 text-white text-xs font-bold flex items-center justify-center">2</div>
+                  <div className="absolute -top-2 -right-2 w-5 sm:w-6 h-5 sm:h-6 rounded-full bg-purple-400 text-white text-xs font-bold flex items-center justify-center">2</div>
                 </div>
-                <h3 className="text-lg font-bold mb-3">AI Prediction Engine</h3>
-                <p className="text-gray-400 text-sm">
+                <h3 className="text-base sm:text-lg font-bold mb-2 sm:mb-3">AI Prediction Engine</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
                   Machine learning forecasts aerospace supply chain delays, identifies mission risks
                 </p>
               </article>
 
               {/* Step 3 */}
               <article className="text-center group">
-                <div className="relative mb-6">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-400 group-hover:scale-110 transition-transform">
-                    <TrendingUp className="w-8 h-8 text-white" />
+                <div className="relative mb-4 sm:mb-6">
+                  <div className="inline-flex items-center justify-center w-12 sm:w-16 h-12 sm:h-16 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-400 group-hover:scale-110 transition-transform">
+                    <TrendingUp className="w-6 sm:w-8 h-6 sm:h-8 text-white" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-green-400 text-black text-xs font-bold flex items-center justify-center">3</div>
+                  <div className="absolute -top-2 -right-2 w-5 sm:w-6 h-5 sm:h-6 rounded-full bg-green-400 text-black text-xs font-bold flex items-center justify-center">3</div>
                 </div>
-                <h3 className="text-lg font-bold mb-3">Supply Chain Optimization</h3>
-                <p className="text-gray-400 text-sm">
+                <h3 className="text-base sm:text-lg font-bold mb-2 sm:mb-3">Supply Chain Optimization</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
                   System suggests replans, alternative aerospace sourcing, inventory optimization
                 </p>
               </article>
 
               {/* Step 4 */}
               <article className="text-center group">
-                <div className="relative mb-6">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-red-400 group-hover:scale-110 transition-transform">
-                    <Users className="w-8 h-8 text-white" />
+                <div className="relative mb-4 sm:mb-6">
+                  <div className="inline-flex items-center justify-center w-12 sm:w-16 h-12 sm:h-16 rounded-2xl bg-gradient-to-br from-orange-500 to-red-400 group-hover:scale-110 transition-transform">
+                    <Users className="w-6 sm:w-8 h-6 sm:h-8 text-white" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-6 h-6 rounded-full bg-orange-400 text-black text-xs font-bold flex items-center justify-center">4</div>
+                  <div className="absolute -top-2 -right-2 w-5 sm:w-6 h-5 sm:h-6 rounded-full bg-orange-400 text-black text-xs font-bold flex items-center justify-center">4</div>
                 </div>
-                <h3 className="text-lg font-bold mb-3">Space Industry Collaboration</h3>
-                <p className="text-gray-400 text-sm">
+                <h3 className="text-base sm:text-lg font-bold mb-2 sm:mb-3">Space Industry Collaboration</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
                   Unified dashboard and messaging eliminates buried emails in aerospace projects
                 </p>
               </article>
@@ -610,44 +614,44 @@ export default function Home() {
         </section>
         Social Proof Section */}
         
-        {/* Network Advantage Section */}
-        <section id="network" className="py-16 sm:py-32 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden" aria-labelledby="network-heading">
+        {/* Network Advantage Section - Mobile Optimized */}
+        <section id="network" className="py-12 sm:py-16 md:py-24 lg:py-32 bg-gradient-to-b from-black to-gray-900 relative overflow-hidden" aria-labelledby="network-heading">
           <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-20 right-20 w-64 h-64 bg-green-500 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-20 left-20 w-96 h-96 bg-blue-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+            <div className="absolute top-10 sm:top-20 right-10 sm:right-20 w-32 sm:w-64 h-32 sm:h-64 bg-green-500 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-10 sm:bottom-20 left-10 sm:left-20 w-48 sm:w-96 h-48 sm:h-96 bg-blue-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
           </div>
 
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <header className="text-center mb-12 sm:mb-20">
-              <h2 id="network-heading" className="text-3xl sm:text-5xl md:text-6xl font-bold mb-6 sm:mb-8 leading-tight">
+            <header className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20">
+              <h2 id="network-heading" className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight">
                 Aerospace Supply Chain Network
                 <span className="bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent block">
                   Gets Smarter With Every Supplier
                 </span>
               </h2>
-              <p className="text-lg sm:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed px-2">
                 The more aerospace OEMs and space suppliers that connect, the more accurate forecasts become. 
                 Network effects accelerate risk detection and strengthen the entire space industry ecosystem.
               </p>
             </header>
 
             <div className="relative">
-              <div className="bg-gradient-to-br from-green-900/20 to-blue-900/20 rounded-3xl p-8 sm:p-12 border border-white/10 backdrop-blur-sm">
+              <div className="bg-gradient-to-br from-green-900/20 to-blue-900/20 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 border border-white/10 backdrop-blur-sm">
                 {/* Network Visualization */}
-                <div className="relative h-64 sm:h-80 mb-8" aria-label="Space industry network visualization">
+                <div className="relative h-48 sm:h-64 md:h-80 mb-6 sm:mb-8" aria-label="Space industry network visualization">
                   <div className="absolute inset-0 flex items-center justify-center">
                     {/* Central Hub */}
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-cyan-400 flex items-center justify-center z-10">
-                      <Network className="w-8 h-8 text-white" />
+                    <div className="w-12 sm:w-16 h-12 sm:h-16 rounded-full bg-gradient-to-br from-green-400 to-cyan-400 flex items-center justify-center z-10">
+                      <Network className="w-6 sm:w-8 h-6 sm:h-8 text-white" />
                     </div>
                     
                     {/* Supplier Nodes */}
                     {[...Array(8)].map((_, i) => (
                       <div
                         key={i}
-                        className="absolute w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-purple-400 animate-pulse"
+                        className="absolute w-6 sm:w-8 h-6 sm:h-8 rounded-full bg-gradient-to-br from-blue-400 to-purple-400 animate-pulse"
                         style={{
-                          transform: `rotate(${i * 45}deg) translateY(-80px) rotate(-${i * 45}deg)`,
+                          transform: `rotate(${i * 45}deg) translateY(-60px) rotate(-${i * 45}deg)`,
                           animationDelay: `${i * 0.5}s`,
                         }}
                       />
@@ -657,9 +661,9 @@ export default function Home() {
                     {[...Array(12)].map((_, i) => (
                       <div
                         key={`outer-${i}`}
-                        className="absolute w-6 h-6 rounded-full bg-gradient-to-br from-gray-400 to-gray-600 animate-pulse opacity-60"
+                        className="absolute w-4 sm:w-6 h-4 sm:h-6 rounded-full bg-gradient-to-br from-gray-400 to-gray-600 animate-pulse opacity-60"
                         style={{
-                          transform: `rotate(${i * 30}deg) translateY(-120px) rotate(-${i * 30}deg)`,
+                          transform: `rotate(${i * 30}deg) translateY(-100px) rotate(-${i * 30}deg)`,
                           animationDelay: `${i * 0.3}s`,
                         }}
                       />
@@ -667,18 +671,18 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 text-center">
                   <div>
-                    <div className="text-3xl font-bold text-green-400 mb-2">+50%</div>
-                    <p className="text-gray-400">Aerospace Forecast Accuracy Improvement</p>
+                    <div className="text-2xl sm:text-3xl font-bold text-green-400 mb-2">+50%</div>
+                    <p className="text-gray-400 text-sm">Aerospace Forecast Accuracy Improvement</p>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-blue-400 mb-2">-75%</div>
-                    <p className="text-gray-400">Space Mission Risk Detection Time</p>
+                    <div className="text-2xl sm:text-3xl font-bold text-blue-400 mb-2">-75%</div>
+                    <p className="text-gray-400 text-sm">Space Mission Risk Detection Time</p>
                   </div>
                   <div>
-                    <div className="text-3xl font-bold text-purple-400 mb-2">10x</div>
-                    <p className="text-gray-400">Faster Supply Chain Problem Resolution</p>
+                    <div className="text-2xl sm:text-3xl font-bold text-purple-400 mb-2">10x</div>
+                    <p className="text-gray-400 text-sm">Faster Supply Chain Problem Resolution</p>
                   </div>
                 </div>
               </div>
@@ -740,88 +744,232 @@ export default function Home() {
 
           CTA Section */}
 
-        {/* Benefits Section */}
-        <section className="py-16 sm:py-32 bg-gradient-to-b from-gray-900 to-black relative" aria-labelledby="benefits-heading">
+        {/* Benefits Section - Mobile Optimized */}
+        <section className="py-12 sm:py-16 md:py-24 lg:py-32 bg-gradient-to-b from-gray-900 to-black relative" aria-labelledby="benefits-heading">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <header className="text-center mb-12 sm:mb-20">
-              <h2 id="benefits-heading" className="text-3xl sm:text-5xl md:text-6xl font-bold mb-6 sm:mb-8 leading-tight">
+            <header className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20">
+              <h2 id="benefits-heading" className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 md:mb-8 leading-tight">
                 Why You Must
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent block">
                   Choose Our Space Supply Chain Platform
                 </span>
               </h2>
-              <p className="text-lg sm:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed px-2">
                 Mission-critical advantages for space industry supply chain optimization
               </p>
             </header>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {/* Benefits with SEO-rich content */}
-              <article className="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 rounded-2xl p-8 border border-blue-500/20 hover:border-blue-400/40 transition-all">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-400 mb-6">
-                  <CheckCircle className="w-6 h-6 text-white" />
+              <article className="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-blue-500/20 hover:border-blue-400/40 transition-all">
+                <div className="inline-flex items-center justify-center w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-400 mb-4 sm:mb-6">
+                  <CheckCircle className="w-5 sm:w-6 h-5 sm:h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">Eliminate Space Mission Surprises</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Eliminate Space Mission Surprises</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
                   Real-time aerospace supply chain alerts prevent crises. Predictive system identifies 
                   potential space program delays weeks or months in advance.
                 </p>
               </article>
 
-              <article className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 rounded-2xl p-8 border border-green-500/20 hover:border-green-400/40 transition-all">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-400 mb-6">
-                  <TrendingUp className="w-6 h-6 text-white" />
+              <article className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-green-500/20 hover:border-green-400/40 transition-all">
+                <div className="inline-flex items-center justify-center w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-400 mb-4 sm:mb-6">
+                  <TrendingUp className="w-5 sm:w-6 h-5 sm:h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">Reduce Aerospace Costs</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Reduce Aerospace Costs</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
                   Avoid millions in space launch delay penalties and idle resource costs. 
                   Optimize aerospace supply chains for maximum efficiency.
                 </p>
               </article>
 
-              <article className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-2xl p-8 border border-purple-500/20 hover:border-purple-400/40 transition-all">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-400 mb-6">
-                  <Shield className="w-6 h-6 text-white" />
+              <article className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-purple-500/20 hover:border-purple-400/40 transition-all">
+                <div className="inline-flex items-center justify-center w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-400 mb-4 sm:mb-6">
+                  <Shield className="w-5 sm:w-6 h-5 sm:h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">Space Mission Assurance</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Space Mission Assurance</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
                   Built with aerospace-grade reliability standards. Mission-critical space operations 
                   deserve mission-critical supply chain tools.
                 </p>
               </article>
 
-              <article className="bg-gradient-to-br from-orange-900/20 to-red-900/20 rounded-2xl p-8 border border-orange-500/20 hover:border-orange-400/40 transition-all">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-orange-500 to-red-400 mb-6">
-                  <Zap className="w-6 h-6 text-white" />
+              <article className="bg-gradient-to-br from-orange-900/20 to-red-900/20 rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-orange-500/20 hover:border-orange-400/40 transition-all">
+                <div className="inline-flex items-center justify-center w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-gradient-to-br from-orange-500 to-red-400 mb-4 sm:mb-6">
+                  <Zap className="w-5 sm:w-6 h-5 sm:h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">Faster Aerospace Decisions</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Faster Aerospace Decisions</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
                   Transform weeks of aerospace email chains into instant insights. Make informed 
                   space program decisions with real-time supply chain data.
                 </p>
               </article>
 
-              <article className="bg-gradient-to-br from-cyan-900/20 to-blue-900/20 rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-400/40 transition-all">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-400 mb-6">
-                  <Network className="w-6 h-6 text-white" />
+              <article className="bg-gradient-to-br from-cyan-900/20 to-blue-900/20 rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-cyan-500/20 hover:border-cyan-400/40 transition-all">
+                <div className="inline-flex items-center justify-center w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-400 mb-4 sm:mb-6">
+                  <Network className="w-5 sm:w-6 h-5 sm:h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">Space Industry Network Effects</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Space Industry Network Effects</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
                   Join growing aerospace ecosystem where every new connection makes the entire 
                   space supply chain network smarter and more valuable.
                 </p>
               </article>
 
-              <article className="bg-gradient-to-br from-indigo-900/20 to-purple-900/20 rounded-2xl p-8 border border-indigo-500/20 hover:border-indigo-400/40 transition-all">
-                <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-400 mb-6">
-                  <Brain className="w-6 h-6 text-white" />
+              <article className="bg-gradient-to-br from-indigo-900/20 to-purple-900/20 rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-indigo-500/20 hover:border-indigo-400/40 transition-all">
+                <div className="inline-flex items-center justify-center w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-400 mb-4 sm:mb-6">
+                  <Brain className="w-5 sm:w-6 h-5 sm:h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-4">AI-Powered Aerospace Insights</h3>
+                <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">AI-Powered Aerospace Insights</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">
                   Machine learning algorithms trained on aerospace supply chain patterns 
                   predict and prevent space mission bottlenecks before they occur.
                 </p>
               </article>
+            </div>
+          </div>
+        </section>
+
+        {/* Waitlist Section - Mobile Optimized */}
+        <section id="form" className="py-16 sm:py-32 bg-gradient-to-r from-blue-900/30 via-purple-900/30 to-cyan-900/30 backdrop-blur-sm border-y border-white/10 relative overflow-hidden" aria-labelledby="waitlist-heading">
+          <div className="absolute inset-0 opacity-20">
+            {[...Array(30)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute w-px h-px bg-white rounded-full animate-pulse"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 5}s`,
+                  animationDuration: `${1 + Math.random() * 3}s`,
+                }}
+              />
+            ))}
+          </div>
+
+          <div className="max-w-5xl mx-auto text-center px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 id="waitlist-heading" className="text-3xl sm:text-5xl md:text-6xl font-bold mb-6 sm:mb-8 leading-tight">
+              Join the Future of Aerospace
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent block">
+                Supply Chain Management
+              </span>
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed">
+              We are onboarding select aerospace OEMs and space suppliers into our early access program. 
+              Join the transformation revolutionizing how space missions get built and launched.
+            </p>
+
+            {/* Waitlist Form */}
+            <div className="max-w-2xl mx-auto">
+              <form 
+                action="https://formspree.io/f/mgvnwyer" 
+                method="POST" 
+                className="bg-gradient-to-br from-black/40 to-gray-900/40 backdrop-blur-xl rounded-3xl p-8 border border-white/20"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                  <div>
+                    <label htmlFor="firstName" className="block text-sm font-semibold text-gray-300 mb-2">
+                      First Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      required
+                      className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all"
+                      placeholder="John"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="lastName" className="block text-sm font-semibold text-gray-300 mb-2">
+                      Last Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      required
+                      className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all"
+                      placeholder="Smith"
+                    />
+                  </div>
+                </div>
+
+                <div className="mb-6">
+                  <label htmlFor="email" className="block text-sm font-semibold text-gray-300 mb-2">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all"
+                    placeholder="john.smith@aerospace.com"
+                  />
+                </div>
+
+                <div className="mb-6">
+                  <label htmlFor="company" className="block text-sm font-semibold text-gray-300 mb-2">
+                    Company/Organization *
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    required
+                    className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all"
+                    placeholder="Aerospace Corp"
+                  />
+                </div>
+
+                <div className="mb-6">
+                  <label htmlFor="role" className="block text-sm font-semibold text-gray-300 mb-2">
+                    Role in Aerospace/Space Industry *
+                  </label>
+                  <select
+                    id="role"
+                    name="role"
+                    required
+                    className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all"
+                  >
+                    <option value="" className="bg-gray-900">Select your role</option>
+                    <option value="OEM Executive" className="bg-gray-900">OEM Executive</option>
+                    <option value="Supply Chain Manager" className="bg-gray-900">Supply Chain Manager</option>
+                    <option value="Procurement Manager" className="bg-gray-900">Procurement Manager</option>
+                    <option value="Manufacturing Manager" className="bg-gray-900">Manufacturing Manager</option>
+                    <option value="Supplier/Vendor" className="bg-gray-900">Supplier/Vendor</option>
+                    <option value="Program Manager" className="bg-gray-900">Program Manager</option>
+                    <option value="Engineering Manager" className="bg-gray-900">Engineering Manager</option>
+                    <option value="Other" className="bg-gray-900">Other</option>
+                  </select>
+                </div>
+
+                <div className="mb-8">
+                  <label htmlFor="challenges" className="block text-sm font-semibold text-gray-300 mb-2">
+                    Current Supply Chain Challenges (Optional)
+                  </label>
+                  <textarea
+                    id="challenges"
+                    name="challenges"
+                    rows="4"
+                    className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition-all resize-none"
+                    placeholder="Describe your biggest aerospace supply chain pain points..."
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-blue-600 hover:to-purple-600 transition-all transform hover:scale-105 hover:shadow-2xl flex items-center justify-center group"
+                  aria-label="Join aerospace supply chain waitlist"
+                >
+                  Join the Waitlist
+                </button>
+
+                <p className="text-gray-400 text-sm mt-4 text-center">
+                  We'll notify you when early access becomes available. No spam, ever.
+                </p>
+              </form>
             </div>
           </div>
         </section>
@@ -862,7 +1010,7 @@ export default function Home() {
                 */}
               </div>
         
-              {/* Product Links */}
+              {/* Product Links 
               <div>
                 <h3 className="text-lg font-semibold mb-4">Aerospace Solutions</h3>
                 <ul className="space-y-3">
@@ -872,9 +1020,9 @@ export default function Home() {
                   <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Mission Security</a></li>
                   <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Platform Pricing</a></li>
                 </ul>
-              </div>
+              </div> */}
 
-              {/* Company Links */}
+              {/* Company Links 
               <div>
                 <h3 className="text-lg font-semibold mb-4">Company</h3>
                 <ul className="space-y-3">
@@ -885,20 +1033,24 @@ export default function Home() {
                   <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Help Center</a></li>
                 </ul>
               </div>
+              */}
             </div>
 
             {/* Bottom Section */}
             <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
               <div className="text-gray-400 text-sm mb-4 md:mb-0">
-                <p>&copy; 2025 Space Supply Chain Platform. All rights reserved.</p>
+                <p>&copy; 2025 Aether. All rights reserved.</p>
                 <p className="mt-1">Pioneering the future of aerospace logistics and space mission success.</p>
               </div>
+              { /* Other Links
               <div className="flex space-x-6 text-sm">
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">Cookies</a>
-              </div>
+              </div> 
+              */}
             </div>
+           
           </div>
         </footer>
 
